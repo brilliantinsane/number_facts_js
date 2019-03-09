@@ -26,8 +26,9 @@ numberInput.addEventListener('input', getFactAjax);
 
 function getFactFetch() {
     let number = numberInput.value;
-
-    fetch('http://numbersapi.com/' + number)
+    
+    fetch('https://cors-anywhere.herokuapp.com/http://numbersapi.com/' 
+ + number)
         .then(res => res.text())
         .then(data => {
             if(number != '') {
